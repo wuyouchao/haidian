@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "checks": [
+    {
+      "check_id": "BOUNDARY_TRUST",
+      "result": "pass",
+      "severity": "major",
+      "target": "geometry/site_boundary.geojson",
+      "message": "PASS with declared limitation: the repository provisional boundary is used only for intake, visualization and design discussion; official geometry requires full recalculation."
+    },
+    {
+      "check_id": "KEY_AREAS_TRUST",
+      "result": "pass",
+      "severity": "major",
+      "target": "geometry/key_areas.geojson",
+      "message": "PASS with three minor KEY_AREA_PROVISIONAL notices; content scoring remains eligible and precise-area claims are excluded."
+    },
+    {
+      "check_id": "LAND_USE_TOPOLOGY",
+      "result": "pass",
+      "severity": "major",
+      "target": "geometry/land_use.geojson",
+      "message": "PASS: land-use polygons form a gap-free, overlap-free partition of the submitted provisional boundary."
+    },
+    {
+      "check_id": "VISUAL_STATIC",
+      "result": "pass",
+      "severity": "info",
+      "target": "visual/index.html",
+      "message": "PASS: offline HTML contains every required section, no active/remote resources, and displayed metrics match metrics.json."
+    },
+    {
+      "check_id": "PROFESSIONAL_EVIDENCE",
+      "result": "pass",
+      "severity": "major",
+      "target": "proposal.md",
+      "message": "PASS: six standards, fifteen design-depth items, thirteen data references, fifteen source references and twelve known metrics are readable in proposal.md."
+    },
+    {
+      "check_id": "DETERMINISTIC_VALIDATION",
+      "result": "pass",
+      "severity": "blocking",
+      "target": "submission package",
+      "message": "PASS: repository deterministic validation completed with no errors; the only warning is the declared provisional site boundary."
+    },
+    {
+      "check_id": "SPATIAL_REVIEW",
+      "result": "pass",
+      "severity": "major",
+      "target": "geometry/*.geojson",
+      "message": "PASS: site containment, key-area topology, land-use coverage and metric recomputation checks succeeded."
+    }
+  ]
+}
