@@ -2,11 +2,14 @@
 title: "京张共生栈：一条可被共同编程的AI城市脊梁"
 author_github: "wuyouchao"
 language: "zh"
+proposal_format_version: "2"
+bilingual_contract_version: "1"
+translation_file: "proposal.en.md"
 license: "COMMUNITY-DISPLAY-ONLY"
 summary: "以京张遗址公园为开放城市主脊，把三处重点区组织为全栈验证、校研转化与智能原生服务三类城市栈，并以十二个可人工复核的AI接口连接公共生活。"
 tracks: ["civic-agent-governance", "jingzhang-heritage-narrative", "enterprise-services-ecosystem"]
 scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "robot-delivery-low-speed", "ai-cultural-guide", "ai-health-service-navigation", "public-safety-operations-review"]
-iteration: "v0.1"
+iteration: "v0.2"
 ---
 
 # 京张共生栈：一条可被共同编程的AI城市脊梁
@@ -15,9 +18,17 @@ iteration: "v0.1"
 
 ## 设计依据与资料清单
 
-本方案把证据分成三层：官方公告确认项目目标、三层范围名称和约面积；清权 Agent 任务书确认六项开放共创任务；仓库 provisional polygon 只承担临时生成、拓扑检查与展示。[source:SITE-PACKAGE] [source:SOURCE-REGISTRY] [source:PROCESSED-FACT-PACK] [source:BOUNDARY-SOURCE] [source:KEY-AREA-SOURCE] [source:OFFICIAL-ANNOUNCEMENT] [source:AGENT-TASKBOOK] [source:FONT-NOTO-SC]。官方公告不能替代精确红线，处理事实包也不是新增权威来源。城市设计、控规表达、用地分类分别响应本地标准快照；建筑设计深度标准缺少官方文件，因此只登记数据缺口，不把第三方镜像升级成正式依据。[standard:PROJECT-OFFICIAL-ANNOUNCEMENT] [standard:PROJECT-AGENT-OPEN-CALL-TASKBOOK] [standard:MOHURD-URBAN-DESIGN-MEASURES] [standard:MOHURD-CONTROL-DETAILED-PLANNING] [standard:MNR-LAND-USE-CLASSIFICATION-GUIDE] [standard:MOHURD-ARCH-DESIGN-DEPTH-2016]
+本方案把证据分成三层：官方公告确认项目目标、三层范围名称和约面积；清权 Agent 任务书确认六项开放共创任务；来源登记表限定每类资料的允许用途。[source:SITE-PACKAGE] [source:SOURCE-REGISTRY] [source:AGENT-TASKBOOK]
 
-现状资料不足以支持地块级判断。方案把“现状诊断”限定为任务书可确认的结构性矛盾：南北文化主线与东西校企联系尚需缝合；AI 产业的算力、数据、测试、合规、人才与生活服务需要可共享接口；AI 场景必须从单次展示转向有退出机制、有人工复核的长期运营。[depth:existing_conditions_diagnosis] [depth:three_level_scope_framework] [depth:overall_spatial_structure] [depth:land_use_layout] [depth:development_intensity_controls] [depth:height_massing_character] [depth:retain_renovate_demolish] [depth:traffic_rail_slow_parking] [depth:municipal_new_infrastructure] [depth:blue_green_public_space] [depth:three_key_area_detailed_design] [depth:renewal_project_list] [depth:phasing_implementation] [depth:metrics_recalculation] [depth:risk_missing_data]
+仓库提供的临时边界只承担生成、拓扑检查与展示，不替代精确官方红线；处理事实包只用于导航，不升级为新增权威来源。[source:BOUNDARY-SOURCE] [source:KEY-AREA-SOURCE] [source:PROCESSED-FACT-PACK]
+
+城市设计、控规表达和用地分类分别响应本地标准快照；建筑设计深度标准缺少官方文件，因此只登记资料缺口，不把第三方镜像升级成正式依据。[standard:MOHURD-URBAN-DESIGN-MEASURES] [standard:MOHURD-CONTROL-DETAILED-PLANNING] [standard:MNR-LAND-USE-CLASSIFICATION-GUIDE]
+
+公告任务和 Agent 开放任务分别进入任务覆盖矩阵，建筑专业缺失文件继续作为深化提醒。[standard:PROJECT-OFFICIAL-ANNOUNCEMENT] [standard:PROJECT-AGENT-OPEN-CALL-TASKBOOK] [standard:MOHURD-ARCH-DESIGN-DEPTH-2016]
+
+现状资料不足以支持地块级判断。方案把现状诊断限定为任务书可确认的结构性矛盾：南北文化主线与东西校企联系尚需缝合，AI 产业需要共享接口，AI 场景需要退出机制和人工复核。[depth:existing_conditions_diagnosis] [depth:three_level_scope_framework] [depth:overall_spatial_structure]
+
+空间、更新和专业系统的完整深度响应保存在设计深度矩阵中；正文只在相关章节引用直接证据，避免把机器索引堆成人类难以阅读的附录。[depth:land_use_layout] [depth:traffic_rail_slow_parking] [depth:risk_missing_data]
 
 ![总体概念与开放城市栈](assets/figures/site-overview.png)
 
@@ -114,7 +125,9 @@ iteration: "v0.1"
 
 ## 蓝绿空间、公共空间与城市风貌
 
-绿地概念面积 [metric:green_space_area_sqm]、比例 [metric:green_ratio]；公共空间概念面积 [metric:public_space_area_sqm]、比例 [metric:public_space_ratio]。这些值由临时边界和设计图层投影复算，只用于内部一致性。[data:geometry/green_space.geojson#GREEN-001] [data:geometry/public_space.geojson#PS-001] [standard:MOHURD-URBAN-DESIGN-MEASURES] [depth:blue_green_public_space]
+绿地概念面积 [metric:green_space_area_sqm] 与比例 [metric:green_ratio] 由绿地设计图层投影复算。[data:geometry/green_space.geojson#GREEN-001]
+
+公共空间概念面积 [metric:public_space_area_sqm] 与比例 [metric:public_space_ratio] 由公共空间设计图层投影复算。[data:geometry/public_space.geojson#PS-001] 两组数值都基于临时边界，只用于方案内部一致性，不作为法定指标。[standard:MOHURD-URBAN-DESIGN-MEASURES] [depth:blue_green_public_space]
 
 四个“朝圣地标”均是可逆公共组件，总数 [metric:landmark_count]：①百年接口站，以铁路工程标准与开源协议并置；②公共模型评测场，展示测试方法和失败案例；③开源原点广场，按贡献许可记录开发者、研究者和公众；④城市合并台，把公众建议、专业复核和版本变更可视化。它们不追求巨型雕塑，而以可阅读、可更新、可质疑的公共知识形成纪念性。
 
@@ -128,7 +141,13 @@ iteration: "v0.1"
 
 ## 指标体系、面积复算与合规矩阵
 
-本方案区分“可复算设计指标”和“必须保持未知的法定指标”。前者包括临时边界面积、绿地/公共空间面积与比例、概念建筑基底、慢行线长、科研概念用地、重点区/场景/地标/行动包数量；后者包括容积率、总建筑面积、法定建筑密度、高度和投资。[metric:site_area_sqm] [metric:green_space_area_sqm] [metric:green_ratio] [metric:public_space_area_sqm] [metric:public_space_ratio] [metric:building_footprint_area_sqm] [metric:slow_mobility_length_m] [metric:land_use_0802_sqm] [metric:key_area_count] [metric:scenario_node_count] [metric:landmark_count] [metric:renewal_project_count] [depth:metrics_recalculation]
+本方案区分“可复算设计指标”和“必须保持未知的法定指标”。临时边界、绿地和公共空间面积及比例均由同一套投影几何复算，只用于方案内部一致性。[metric:site_area_sqm] [metric:green_space_area_sqm] [metric:green_ratio]
+
+概念建筑基底、慢行线长和科研概念用地同样可复算，但不等于建设规模、道路红线或法定用地指标。[metric:building_footprint_area_sqm] [metric:slow_mobility_length_m] [metric:land_use_0802_sqm]
+
+重点区、场景、地标和行动包数量用于核对任务覆盖；容积率、总建筑面积、法定建筑密度、高度和投资继续保持待正式资料补齐。[metric:key_area_count] [metric:scenario_node_count] [metric:landmark_count]
+
+所有指标在官方边界到位后通过同一复算链整体更新，避免只修改图面数字。[metric:renewal_project_count] [metric:public_space_ratio] [depth:metrics_recalculation]
 
 复算链为：EPSG:4326 GeoJSON → EPSG:4548 投影 → geometry union/length → metrics.json → proposal/HTML/PDF。合规矩阵覆盖公告 1.3、1.4、1.5 与 agent.1-agent.6；标准矩阵覆盖五项 mandatory 标准；深度矩阵覆盖十五项 formal 深度。官方 polygon 到位后必须重新运行同一链条，而不是手工改图面数字。
 
